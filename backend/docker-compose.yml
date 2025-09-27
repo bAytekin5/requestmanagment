@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: reqman-postgres
+    environment:
+      POSTGRES_DB: reqman
+      POSTGRES_USER: reqman
+      POSTGRES_PASSWORD: reqman
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./reqman-backend
+      dockerfile: Dockerfile
+    container_name: reqman-backend
+    depends_on:
+      - db
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/reqman
+      DB_USER: reqman
+      DB_PASSWORD: reqman
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./reqman-backend/logs:/app/logs
+
+volumes:
+  postgres_data:
+

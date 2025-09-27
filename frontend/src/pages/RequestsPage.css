@@ -1,0 +1,64 @@
+.requests-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.requests-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.csv-button {
+  border-radius: 999px;
+  padding: 0 18px;
+  background: rgba(56, 189, 248, 0.16);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  color: #38bdf8;
+}
+
+.csv-button:hover {
+  background: rgba(56, 189, 248, 0.28);
+}
+
+.requests-title {
+  margin: 0 !important;
+  color: #f8fafc !important;
+}
+
+.details-modal .ant-modal-content {
+  background: rgba(15, 23, 42, 0.92);
+  border-radius: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 30px 50px rgba(15, 23, 42, 0.5);
+}
+
+.details-modal .ant-modal-title {
+  color: #e2e8f0 !important;
+}
+
+.details-modal p {
+  color: rgba(226, 232, 240, 0.85);
+}
+
+@media (max-width: 768px) {
+  .filter-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-group .ant-select,
+  .filter-group .ant-input {
+    width: 100% !important;
+  }
+}
+

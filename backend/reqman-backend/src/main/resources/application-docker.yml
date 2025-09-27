@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+jwt:
+  secret: ${JWT_SECRET:Y2hhbmdlLW1lLWluLXByb2QtcGxlYXNlLWNoYW5nZS1tZS1wbGVhc2UtY2hhbmdlLW1l}
+
