@@ -31,7 +31,8 @@ public class AuthDtos {
     ) {
     }
 
-    public record UserProfile(Long id, String email, String fullName, java.util.Set<String> roles) {
+    public record UserProfile(Long id, String email, String fullName, Set<String> roles) {
     }
 }
+
 
