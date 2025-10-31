@@ -103,5 +103,3 @@ npm run build
 - Add file upload support for attachments
 - CI/CD pipeline (GitHub Actions) for build & tests
 
-## License
-This project is provided as-is for educational purposes.
