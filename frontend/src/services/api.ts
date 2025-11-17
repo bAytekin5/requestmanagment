@@ -53,8 +53,8 @@ export const createRequest = (data: CreateRequest) => extractData(api.post<Reque
 
 export const updateRequestStatus = (id: number, data: UpdateRequestStatus) =>
   extractData(api.put<RequestItem>(`/requests/${id}/status`, data));
-
 export const fetchAdmins = () => extractData(api.get<UserSummary[]>('/requests/admins'));
 
 export const fetchSummary = () => extractData(api.get<RequestSummary>('/requests/summary'));
+
 
